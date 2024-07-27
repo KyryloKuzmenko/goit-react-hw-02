@@ -5,7 +5,7 @@ const Feedback = ({good, neutral, bad, totalFeedback, positiveFeedback}) => {
     
     return (
         <div>
-        <ul>
+        <ul className={styles.list}>
           <li>Good: {good}</li>
           <li>Neutral: {neutral}</li>
           <li>Bad: {bad}</li>
