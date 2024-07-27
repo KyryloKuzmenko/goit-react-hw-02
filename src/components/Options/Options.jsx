@@ -3,13 +3,25 @@ import styles from "./Options.module.css"
 const Options = ({ onLeaveFeedback, onResetFeedback, showResetButton }) => {
   return (
     <div>
-      <button type="button" onClick={() => onLeaveFeedback("good")}>
+      <button
+        className={`${styles.btn} ${styles.good}`}
+        type="button"
+        onClick={() => onLeaveFeedback("good")}
+      >
         Good
       </button>
-      <button type="button" onClick={() => onLeaveFeedback("neutral")}>
+      <button
+        className={`${styles.btn} ${styles.neutral}`}
+        type="button"
+        onClick={() => onLeaveFeedback("neutral")}
+      >
         Neutral
       </button>
-      <button type="button" onClick={() => onLeaveFeedback("bad")}>
+      <button
+        className={`${styles.btn} ${styles.bad}`}
+        type="button"
+        onClick={() => onLeaveFeedback("bad")}
+      >
         Bad
       </button>
       {showResetButton && (

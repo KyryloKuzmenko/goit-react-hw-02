@@ -1,0 +1,50 @@
+.btn {
+  margin-right: 10px;
+  color: #213547;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: #fff;
+  transition: transform 0.1s ease;
+}
+
+.bad::before,
+.bad::after {
+  content: "☹️";
+}
+
+.neutral::before,
+.neutral::after {
+  content: "😐";
+}
+
+.good::before,
+.good::after {
+  content: "😊";
+}
+
+.btn::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.btn::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.btn:active::before {
+  transform: translateX(0);
+}
+
+.btn:active::after {
+  transform: translateX(0);
+}
