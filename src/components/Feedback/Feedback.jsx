@@ -1,16 +1,18 @@
 import styles from "./Feedback.module.css"
 
-const Feedback = () => {
+const Feedback = ({good, neutral, bad, totalFeedback, positiveFeedback}) => {
+    
+    
     return (
         <div>
-            <ul>
-                <li>Good: </li>
-                <li>Neutral: </li>
-                <li>Bad: </li>
-                <li>Total: </li>
-                <li>Pozitive: </li>
-            </ul>
-        </div>
+        <ul>
+          <li>Good: {good}</li>
+          <li>Neutral: {neutral}</li>
+          <li>Bad: {bad}</li>
+          <li>Total: {totalFeedback}</li>
+          <li>Positive: {positiveFeedback}</li>
+        </ul>
+      </div>
     );
 };
 
